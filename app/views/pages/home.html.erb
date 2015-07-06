@@ -4,6 +4,14 @@
 </div>
 
 <div class='row text-center'>
+<% if user_signed_in? %>
+	<% if current_user.profile %>
+	<%= link_to "Update Profile", edit_user_profile_path(current_user) if current_user %>
+	<%= link_to "View Profile", user_path(current_user) %>
+	<% else %>
+		<%= link_to "Profile", new_user_profile_path(current_user) if current_user %>
+	<% end %>
+<% else %>
 	<div class='col-sm-6'>
 		<div class='well'>
 			<h2>Standard</h2>
@@ -18,4 +26,5 @@
 			<%= link_to "Sign up for Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
 		</div>
 	</div>
+<% end %>
 </div>
