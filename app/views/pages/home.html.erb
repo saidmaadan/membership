@@ -6,10 +6,10 @@
 <div class='row text-center'>
 <% if user_signed_in? %>
 	<% if current_user.profile %>
-	<%= link_to "Update Profile", edit_user_profile_path(current_user) if current_user %>
+	<%= link_to "Update Profile", edit_user_profile_path(current_user) %>
 	<%= link_to "View Profile", user_path(current_user) %>
 	<% else %>
-		<%= link_to "Profile", new_user_profile_path(current_user) if current_user %>
+		<%= link_to "Profile", new_user_profile_path(current_user) %>
 	<% end %>
 <% else %>
 	<div class='col-sm-6'>
