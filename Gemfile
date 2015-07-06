@@ -30,6 +30,7 @@ group :production do
 	gem 'rails_12factor'
 end
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'devise'
 gem 'stripe', '~> 1.16.1'
